@@ -1,0 +1,17 @@
+{
+  "name": "lecture4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "echo 'running the backend tests' && node index.js",
+    "test" : "echo 'no tests available right now'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19"
+  }
+}

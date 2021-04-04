@@ -1,0 +1,40 @@
+<%- include("includes/head") %>
+    <% if(employees.length===0){%>
+        <h1>No employees</h1>
+        <% }else{ %>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Address</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let employee of employees){ %>
+                        <tr>
+                            <td>
+                                <%= employee.name %>
+                            </td>
+                            <td>
+                                <%= employee.phone %>
+                            </td>
+                            <td>
+                                <%= employee.address %>
+                            </td>
+                            <td>
+                                <a href="<%= `/employees/edit/${employee._id}` %>" class="btn btn-warning">edit</a>
+                            </td>
+                            <td>
+                                <a href="<%= `/employees/del/${employee._id}` %>" class="btn btn-danger">del</a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+            <% } %>
+                <a href="/" class="btn btn-primary">Back</a>
+                <%- include("includes/tail") %>
